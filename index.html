@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Noto Sans HK' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>Todo Page</title>
+    </head>
+    <body>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller=("myc", function($scope) {
+                $scope.tasks = [];
+                $scope.fun = function(e) {}
+            });
+        </script>
+        <div class="container" ng-controller="myc" ng-app="myApp">
+            <input type="text" class="tb" placeholder="Add a new task" ng-model="tb" ng-keyup="$event.keycode == 13 && fun($event.target.value)" />
+            <input type="button" ng-click="fun(tb.value)" value="Okay">
+            <div class="nc">
+                <h3 style="margin-top: 20px; margin-bottom: 10px;">Not Completed</h3>
+                <div class="task">
+                    Task-1
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </div>
+                <div class="task">
+                    Task-2
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </div>
+                <div class="c">
+                    <h3 style="margin-top: 20px; margin-bottom: 10px;">Completed</h3>
+                    <div class="task">
+                        Task-3
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+                    <div class="task">
+                        Task-4
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

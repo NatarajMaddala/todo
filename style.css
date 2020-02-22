@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Noto Sans HK');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Noto sans HK;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(170deg, #4682B4, #00FA9A);
+    min-height: 100vh;
+}
+.container {
+    padding: 20px;
+}
+.tb {
+    width: 500px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    outline: none;
+}
+.task {
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    margin: 6px 0;
+    overflow: hidden;
+}
+.task i {
+    float: right;
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.c .task {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
